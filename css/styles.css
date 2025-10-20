@@ -1,0 +1,95 @@
+/*  
+Student Name: Phoenix Dodge
+File name: css/styles.css
+Date: 10/19/2025
+*/
+:root{
+  --bg:#0a0a0a;        /* near-black background */
+  --card:#161616;      /* card surface */
+  --text:#f5f5f5;      /* light text */
+  --accent:#dc2626;    /* red accent */
+  --muted:#9ca3af;     /* gray for secondary text */
+  --light:#111111;
+  --accent-dark:#b91c1c;
+  --accent-verydark:#7f1d1d;     /* gradient stop */
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,Ubuntu,"Apple Color Emoji","Segoe UI Emoji";
+  color:var(--text);
+  background:linear-gradient(180deg,var(--bg),var(--light));
+  line-height:1.6;
+}
+/* Skip link for accessibility */
+.skip-link{
+  position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;
+}
+.skip-link:focus{position:static;width:auto;height:auto;background:#000;padding:.5rem;display:inline-block;margin:.5rem;color:#fff;}
+/* Layout */
+.container{max-width:1100px;margin:0 auto;padding:1rem}
+header{
+  background:#0b1222;
+  position:sticky;top:0;z-index:999;border-bottom:1px solid #1f2937;
+}
+.brand{display:flex;align-items:center;gap:.75rem}
+.brand .logo{width:40px;height:40px;border-radius:50%;background:var(--accent);display:inline-block}
+.brand h1{font-size:1.25rem;margin:.25rem 0}
+nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+nav ul{list-style:none;margin:0;padding:0;display:flex;gap:.5rem;flex-wrap:wrap}
+nav li{display:inline-block}
+nav a{
+  text-decoration:none;
+  color:var(--text);
+  padding:.5rem .75rem;border-radius:.75rem;
+}
+nav a:hover, nav a:focus{background:#1a0d0d}
+.cta{background:var(--accent);color:#fff;font-weight:700}
+/* Hero */
+.hero{padding:3rem 1rem;text-align:center;background:radial-gradient(80% 120% at 50% 0%,#0d1b2a,#0b1222)}
+.hero h2{font-size:2rem;margin:0 0 .5rem}
+.hero p{color:var(--muted);margin:0 auto 1.25rem;max-width:55ch}
+.hero .buttons{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap}
+.button{display:inline-block;padding:.75rem 1rem;border-radius:.75rem;border:1px solid #1f2937;color:var(--text);text-decoration:none}
+.card{
+  background:var(--card);border:1px solid #1f2937;border-radius:1rem;padding:1rem;
+  box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+.grid{display:grid;gap:1rem}
+/* Cards */
+.card h3{margin-top:0}
+.badge{display:inline-block;background:#1a0909;color:#fde2e2;border:1px solid #991b1b;padding:.15rem .5rem;border-radius:999px;font-size:.75rem}
+/* Footer */
+footer{background:#0b1222;color:var(--muted);text-align:center;padding:1% 0%}
+footer p{color:#e3eaf8;text-decoration:none;margin:.25rem 0}
+/* Images */
+img{max-width:100%;height:auto;border-radius:.5rem}
+figure{margin:0}
+figcaption{color:var(--muted);font-size:.9rem;margin-top:.25rem}
+/* Forms */
+form{display:grid;gap:.75rem}
+input, textarea, select{
+  background:#0f172a;color:var(--text);border:1px solid #1f2937;border-radius:.5rem;padding:.6rem;
+}
+input::placeholder, textarea::placeholder{color:#6b7280}
+button{border:0;background:var(--accent);color:#072712;padding:.75rem 1rem;border-radius:.75rem;font-weight:700;cursor:pointer}
+/* Utilities */
+.two-col{display:grid;gap:1rem}
+.kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.kpi{background:#0f172a;border:1px solid #1f2937;border-radius:.75rem;padding:1rem;text-align:center}
+.kpi h4{margin:.25rem 0 0}
+/* Responsive design */
+@media screen and (min-width: 481px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .two-col{grid-template-columns:1fr 1fr}
+}
+@media screen and (min-width: 769px){
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .hero h2{font-size:2.5rem}
+}
+/* Style rules for footer content */
+
+.button:hover{background:var(--accent-dark)}
+
+.cta:hover{background:var(--accent-dark);color:#fff}
