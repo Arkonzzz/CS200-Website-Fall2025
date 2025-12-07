@@ -5,105 +5,147 @@
 -->
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fierce Strength — Nutrition</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
+    <a class="skip-link" href="#main">Skip to content</a>
     <header>
         <div class="container brand" style="justify-content:space-between">
-        <div class="brand"><span class="logo"></span><h1>Fierce Strength</h1></div>
+            <div class="brand"><span class="logo"></span>
+                <h1>Fierce Strength</h1>
+            </div>
             <nav aria-label="Main navigation">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="workouts.html">Workouts</a></li>
-            <li><a class="cta" href="nutrition.html">Nutrition</a></li>
-            <li><a href="exercises.html">Exercises</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-        </nav>
-    </div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="workouts.html">Workouts</a></li>
+                    <li><a class="cta" href="nutrition.html">Nutrition</a></li>
+                    <li><a href="exercises.html">Exercises</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-<main id="main" class="container">
-    <h2>Nutrition Basics</h2>
+    <main id="main" class="container">
+        <h2>Nutrition Basics</h2>
 
-    <section id="maintenance" class="card">
-        <h3><span class="badge">Coming soon</span> Maintenance Calories Calculator</h3>
-        <form aria-label="Maintenance calories placeholder" style="display:grid;gap:.5rem;grid-template-columns:repeat(2,1fr)">
-    <div style="display:grid;gap:.25rem">
-        <label for="mcSex">Sex</label>
-        <select id="mcSex" name="mcSex">
-            <option value="" disabled selected>Select</option>
-            <option>Male</option>
-            <option>Female</option>
-        </select>
-    </div>
-    <div style="display:grid;gap:.25rem">
-        <label for="mcAge">Age</label>
-        <input id="mcAge" name="mcAge" type="number" min="10" max="100" placeholder="e.g., 20">
-    </div>
-    <div style="display:grid;gap:.25rem">
-        <label for="mcHeight">Height (cm)</label>
-        <input id="mcHeight" name="mcHeight" type="number" step="1" placeholder="e.g., 175">
-    </div>
-    <div style="display:grid;gap:.25rem">
-        <label for="mcWeight">Weight (kg)</label>
-        <input id="mcWeight" name="mcWeight" type="number" step="0.1" placeholder="e.g., 75">
-    </div>
-    <div style="display:grid;gap:.25rem">
-        <label for="mcActivity">Activity Level</label>
-        <select id="mcActivity" name="mcActivity">
-        <option value="" disabled selected>Select</option>
-        <option>Sedentary</option>
-        <option>Lightly active</option>
-        <option>Moderately active</option>
-        <option>Very active</option>
-        <option>Extra active</option>
-        </select>
-    </div>
-    <div style="grid-column:1/-1;display:flex;gap:.5rem;align-items:center;margin-top:.25rem">
-        <button type="button" disabled aria-disabled="true" title="Calculator coming soon">Calculate</button>
-    </div>
-</form>
-    <p>Tips for Nutrition</p>
-    <ul>
-        <li>Start with protein ~0.7-1.0 g per lb bodyweight.</li>
-        <li>Distribute remaining calories across carbs and fats to preference.</li>
-        <li>Track weekly bodyweight trend and adjust ±250 kcal as needed.</li>
-    </ul>
-  </section>
+        <section id="maintenance" class="card">
+            <h3><span class="badge">Now live</span> Maintenance Calories Calculator</h3>
 
-  <section class="card" style="margin-top:1rem">
-    <h3>Simple Macro Targets</h3>
-    <table style="width:100%;border-collapse:collapse">
-        <thead>
-            <tr>
-                <th style="text-align:left;border-bottom:1px solid #1f2937;padding:.5rem">Goal</th>
-                <th style="text-align:left;border-bottom:1px solid #1f2937;padding:.5rem">Protein</th>
-                <th style="text-align:left;border-bottom:1px solid #1f2937;padding:.5rem">Carbs</th>
-                <th style="text-align:left;border-bottom:1px solid #1f2937;padding:.5rem">Fats</th>
-            </tr>
-        </thead>
-        <tbody>
-                <tr><td style="padding:.5rem">Muscle gain</td><td style="padding:.5rem">0.9 g/lb</td><td style="padding:.5rem">High</td><td style="padding:.5rem">Moderate</td></tr>
-                <tr><td style="padding:.5rem">Maintenance</td><td style="padding:.5rem">0.8 g/lb</td><td style="padding:.5rem">Moderate</td><td style="padding:.5rem">Moderate</td></tr>
-                <tr><td style="padding:.5rem">Fat loss</td><td style="padding:.5rem">1.0 g/lb</td><td style="padding:.5rem">Moderate</td><td style="padding:.5rem">Lower</td></tr>
-        </tbody>
-    </table>
-    <p>External resource:
-        <a href="https://hartfordhealthcare.org/about-us/news-press/news-detail?articleId=65418&publicid=499" target="_blank" rel="noopener">
-            Hartford HealthCare: Protein Needs & Guidance
-        </a>
-    </p>
-  </section>
-</main>
+            <form id="maintenanceForm" aria-label="Maintenance calories calculator"
+                style="display:grid;gap:.5rem;grid-template-columns:repeat(2,1fr)">
+                <div style="display:grid;gap:.25rem">
+                    <label for="mcSex">Sex</label>
+                    <select id="mcSex" name="mcSex">
+                        <option value="" disabled selected>Select</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <div style="display:grid;gap:.25rem">
+                    <label for="mcAge">Age</label>
+                    <input id="mcAge" name="mcAge" type="number" min="10" max="100" placeholder="e.g., 20">
+                </div>
+                <div style="display:grid;gap:.25rem">
+                    <label for="mcHeight">Height (cm)</label>
+                    <input id="mcHeight" name="mcHeight" type="number" step="1" placeholder="e.g., 175">
+                </div>
+                <div style="display:grid;gap:.25rem">
+                    <label for="mcWeight">Weight (kg)</label>
+                    <input id="mcWeight" name="mcWeight" type="number" step="0.1" placeholder="e.g., 75">
+                </div>
+                <div style="display:grid;gap:.25rem">
+                    <label for="mcActivity">Activity Level</label>
+                    <select id="mcActivity" name="mcActivity">
+                        <option value="" disabled selected>Select</option>
+                        <option value="sedentary">Sedentary</option>
+                        <option value="light">Lightly active</option>
+                        <option value="moderate">Moderately active</option>
+                        <option value="very">Very active</option>
+                        <option value="extra">Extra active</option>
+                    </select>
+                </div>
+                <div style="grid-column:1/-1;display:flex;gap:.5rem;align-items:center;margin-top:.25rem">
+                    <button id="mcCalculate" type="button" class="btn btn-danger">
+                        Calculate
+                    </button>
+                    <p id="mcResult" class="mb-0 text-muted"></p>
+                </div>
+            </form>
 
-<footer>
-    <p>&copy; 2025 Fierce Strength • Website for CS200.</p>
-</footer>
+            <p>Tips for Nutrition</p>
+            <ul>
+                <li>Start with protein ~0.7-1.0 g per lb bodyweight.</li>
+                <li>Distribute remaining calories across carbs and fats to preference.</li>
+                <li>Track weekly bodyweight trend and adjust ±250 kcal as needed.</li>
+            </ul>
+        </section>
+
+
+        <section class="card" style="margin-top:1rem">
+            <h3>Simple Macro Targets</h3>
+            <table class="table table-dark table-striped" style="width:100%;border-collapse:collapse">
+                <thead>
+                    <tr>
+                        <th style="text-align:left;border-bottom:1px solid #1f2937;padding:.5rem">Goal</th>
+                        <th style="text-align:left;border-bottom:1px solid #1f2937;padding:.5rem">Protein</th>
+                        <th style="text-align:left;border-bottom:1px solid #1f2937;padding:.5rem">Carbs</th>
+                        <th style="text-align:left;border-bottom:1px solid #1f2937;padding:.5rem">Fats</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding:.5rem">Muscle gain</td>
+                        <td style="padding:.5rem">0.9 g/lb</td>
+                        <td style="padding:.5rem">High</td>
+                        <td style="padding:.5rem">Moderate</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:.5rem">Maintenance</td>
+                        <td style="padding:.5rem">0.8 g/lb</td>
+                        <td style="padding:.5rem">Moderate</td>
+                        <td style="padding:.5rem">Moderate</td>
+                    </tr>
+                    <tr>
+                        <td style="padding:.5rem">Fat loss</td>
+                        <td style="padding:.5rem">1.0 g/lb</td>
+                        <td style="padding:.5rem">Moderate</td>
+                        <td style="padding:.5rem">Lower</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>External resource:
+                <a href="https://hartfordhealthcare.org/about-us/news-press/news-detail?articleId=65418&publicid=499"
+                    target="_blank" rel="noopener">
+                    Hartford HealthCare: Protein Needs & Guidance
+                </a>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Fierce Strength • Website for CS200.</p>
+    </footer>
+    <!-- Bootstrap JS bundle + custom script -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JsmrQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4F86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script src="scripts/script.js"></script>
 </body>
+
 </html>
