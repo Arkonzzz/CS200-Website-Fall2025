@@ -1,13 +1,13 @@
 /*
     Student Name: Phoenix Dodge
     File Name: script.js
-    Date: 12/07/2025
+    Date: 12/7/2025
     Description: Adds interactivity (1RM calculator, maintenance calories calculator, and contact form feedback)
 */
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    // === 1RM CALCULATOR (Epley formula) ===
+    // 1RM CALCULATOR (Epley formula)
     const oneRmForm = document.getElementById("oneRmForm");
     if (oneRmForm) {
         const weightInput = document.getElementById("oneRmWeight");
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // === MAINTENANCE CALORIES CALCULATOR (Mifflin–St Jeor) ===
+    // MAINTENANCE CALORIES CALCULATOR (Mifflin–St Jeor)
     const mcForm = document.getElementById("maintenanceForm");
     if (mcForm) {
         const sexEl = document.getElementById("mcSex");
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // === CONTACT FORM FEEDBACK ===
+    // CONTACT FORM FEEDBACK
     const contactForm =
         document.getElementById("contactForm") ||
         document.querySelector('form[aria-label="Contact form"]');
